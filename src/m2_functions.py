@@ -141,7 +141,7 @@ def turtle5():
     # Create angle variable for SimpleTurtles then set opposite
     angle = random.randrange(0, 360)
     jan.left(angle)
-    ben.left(180-angle)
+    ben.left(180 + angle)
     jan.forward(250)
     ben.forward(250)
 
