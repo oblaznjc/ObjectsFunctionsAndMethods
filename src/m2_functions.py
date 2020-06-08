@@ -34,6 +34,7 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
@@ -103,9 +104,30 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    """
+    Constructs a default SimpleTurtle
+    Sets pen color to orange and thickness to 1
+    Makes the SimpleTurtle draw a line in a random direction,
+    then draw a circle and return to to where it came from
+    """
+    zaba = rg.SimpleTurtle()
+    zaba.pen = rg.Pen('orange', 1)
+
+    # Keep track of where I am, to go back to it at the end.
+    i_began_here = rg.Point(zaba.x_cor(), zaba.y_cor())
+
+    zaba.left(random.randrange(0,360))
+    zaba.forward(250)
+    zaba.draw_circle(8)
+
+    # Go back to where I was when this function began its run.
+    zaba.go_to(i_began_here)
+
+
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -137,7 +159,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -167,7 +189,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
