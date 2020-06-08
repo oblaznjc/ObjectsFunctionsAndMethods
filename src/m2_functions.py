@@ -35,6 +35,7 @@ def main():
 
     turtle1()
     turtle4()
+    turtle5()
     turtle3()
     turtle2()
     turtle2()
@@ -124,6 +125,25 @@ def turtle4():
     # Go back to where I was when this function began its run.
     zaba.go_to(i_began_here)
 
+
+def turtle5():
+    """
+       Constructs two default SimpleTurtles
+       Sets pen color to orange and thickness to 1
+       Makes the SimpleTurtles draw equal lines
+       in random and opposite directions,
+       """
+    jan = rg.SimpleTurtle()
+    jan.pen = rg.Pen('yellow', 3)
+    ben = rg.SimpleTurtle()
+    ben.pen = rg.Pen('red', 3)
+
+    # Create angle variable for SimpleTurtles then set opposite
+    angle = random.randrange(0, 360)
+    jan.left(angle)
+    ben.left(180-angle)
+    jan.forward(250)
+    ben.forward(250)
 
 ########################################################################
 #
