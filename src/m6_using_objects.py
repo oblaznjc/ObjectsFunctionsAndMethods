@@ -171,7 +171,7 @@ def lines():
     line1 = rg.Line(start1, end1)
     line1.attach_to(window)
     line2 = rg.Line(start2, end2)
-    line2.thickness = 3
+    line2.thickness = 7
     line2.attach_to(window)
 
     # prints line2 midpoint information
