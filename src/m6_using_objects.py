@@ -31,21 +31,21 @@ def two_circles():
     """
     window = rg.RoseWindow()
 
-    # Circle1 Instance Variables
+    # circle1 Instance Variables
     center1 = rg.Point(100, 150)
     radius1 = 20
 
-    # Circle2 Instance Variables and Attachment
+    # circle2 Instance Variables
     center2 = rg.Point(70, 150)
     radius2 = 50
 
     # Construct and attach both circles
     # Fill Circle1
-    Circle1 = rg.Circle(center1, radius1)
-    Circle1.fill_color = 'red'
-    Circle1.attach_to(window)
-    Circle2 = rg.Circle(center2, radius2)
-    Circle2.attach_to(window)
+    circle1 = rg.Circle(center1, radius1)
+    circle1.fill_color = 'red'
+    circle1.attach_to(window)
+    circle2 = rg.Circle(center2, radius2)
+    circle2.attach_to(window)
 
     window.render()
     window.close_on_mouse_click()
@@ -95,11 +95,11 @@ def circle_and_rectangle():
     center = rg.Point(180, 115)
     radius1 = 20
 
-    # Sets rectangle Instance Variables and Attachment
+    # Sets rectangle Instance Variables
     corner1 = rg.Point(70, 50)
     corner2 = rg.Point(300, 200)
 
-    # Constructs and attaches both circles ro window
+    # Constructs and attaches both objects to window
     # Fills circle
     circle = rg.Circle(center, radius1)
     circle.fill_color = 'blue'
@@ -111,15 +111,15 @@ def circle_and_rectangle():
     print(circle.outline_thickness)
     print(circle.fill_color)
     print(circle.center)
-    print((circle._get_coordinates_for_drawing()[2]+circle._get_coordinates_for_drawing()[0])/2)  # X coordinate
-    print((circle._get_coordinates_for_drawing()[3]+circle._get_coordinates_for_drawing()[1])/2)  # Y coordinate
+    print(circle.center.x)  # X coordinate
+    print(circle.center.y)  # Y coordinate
 
     # prints rectangle information
     print(rectangle.outline_thickness)
     print(rectangle.fill_color)
     print(rectangle.get_center())
-    print((rectangle._get_coordinates_for_drawing()[2] + rectangle._get_coordinates_for_drawing()[0]) / 2)  # X coordinate
-    print((rectangle._get_coordinates_for_drawing()[3] + rectangle._get_coordinates_for_drawing()[1]) / 2)  # Y coordinate
+    print(rectangle.get_center().x)  # X coordinate
+    print(rectangle.get_center().y)  # Y coordinate
 
     window.render()
     window.close_on_mouse_click()
@@ -166,7 +166,7 @@ def lines():
     start2 = rg.Point(100, 100)
     end2 = rg.Point(121, 200)
 
-    # Constructs and attaches both circles to window
+    # Constructs and attaches both lines to window
     # Sets line2 thickness
     line1 = rg.Line(start1, end1)
     line1.attach_to(window)
@@ -176,8 +176,8 @@ def lines():
 
     # prints line2 midpoint information
     print(line2.get_midpoint())
-    print((line2._get_coordinates_for_drawing()[2] + line2._get_coordinates_for_drawing()[0]) / 2)  # X coordinate
-    print((line2._get_coordinates_for_drawing()[3] + line2._get_coordinates_for_drawing()[1]) / 2)  # Y coordinate
+    print(line2.get_midpoint().x)  # X coordinate
+    print(line2.get_midpoint().y)  # Y coordinate
 
     window.render()
     window.close_on_mouse_click()
