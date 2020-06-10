@@ -5,8 +5,8 @@ This module uses ROSEGRAPHICS to demonstrate:
   -- accessing their DATA via INSTANCE VARIABLES.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jacob Oblazny.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
@@ -134,7 +134,6 @@ def example3():
     circle = rg.Circle(center_point, radius)
     circle.fill_color = 'green'
     circle.attach_to(window)
-
     # ------------------------------------------------------------------
     # Rectangle: needs two opposite corners.
     # ------------------------------------------------------------------
@@ -149,7 +148,7 @@ def example3():
     window.render()
 
     # ------------------------------------------------------------------
-    # A Rectangle has instance variables  corner_1  and  corner2.
+    # A Rectangle has instance variables  corner1  and  corner2.
     # ------------------------------------------------------------------
     corner1 = rectangle.corner_1
     corner2 = rectangle.corner_2
